@@ -1,7 +1,5 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+Book.create({"id"=>1, "title"=>"Try the Book", "author"=>"Hartl", "desc"=>"https://www.railstutorial.org/book/toy_app", "created_at"=>Sat, 10 Nov 2018 22:57:42 UTC +00:00, "updated_at"=>Sat, 10 Nov 2018 22:57:42 UTC +00:00})
+Book.create({"id"=>2, "title"=>"Learn Rails", "author"=>"Hartl", "desc"=>"https://www.railstutorial.org/book/toy_app", "created_at"=>Sat, 10 Nov 2018 22:52:49 UTC +00:00, "updated_at"=>Sat, 10 Nov 2018 22:52:49 UTC +00:00})
+Book.create({"id"=>3, "title"=>"Haha", "author"=>"Jenny", "desc"=>"nothing", "created_at"=>Sat, 10 Nov 2018 23:01:45 UTC +00:00, "updated_at"=>Sat, 10 Nov 2018 23:01:45 UTC +00:00})
+Bookmark.create({"id"=>1, "note"=>"Just a test book mark", "book_id"=>1, "entry_date"=>Sat, 10 Nov 2018, "page"=>1, "progess"=>2, "created_at"=>Sat, 10 Nov 2018 22:53:17 UTC +00:00, "updated_at"=>Sat, 10 Nov 2018 22:53:17 UTC +00:00})
+Bookmark.create({"id"=>2, "note"=>"mmm getting interesting", "book_id"=>1, "entry_date"=>Sat, 10 Nov 2018, "page"=>1, "progess"=>2, "created_at"=>Sat, 10 Nov 2018 23:28:00 UTC +00:00, "updated_at"=>Sat, 10 Nov 2018 23:28:00 UTC +00:00})
