@@ -42,4 +42,12 @@ rails db:migrate
 #rails g migration add_descp_to_books desc:string
 #but this didn't really give me the auto generated things I wanted to look at
 ```
+
+## Twitter
+```ruby
+#The rails cast
+http://railscasts.com/episodes/328-twitter-bootstrap-basics?autoplay=true
+```
 ## Useful resources
+
+

@@ -27,6 +27,17 @@
 
 <h3>Progress Update</h3>
 <%= @current_progress %>
+<%= @progress_bar %>
+
+<div class="container">
+  <h2>Basic Progress Bar</h2>
+  <div class="progress">
+    <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:<%= @progress_bar%>%">
+      <span class="sr-only">70% Complete</span>
+    </div>
+  </div>
+</div>
+
 <h4> Current Bookmarks: </h4>
 <% @book.bookmarks.each do |bookmark| %>
   <p>Some notes about this book mark: <%= bookmark.note %></p>
