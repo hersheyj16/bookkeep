@@ -23,7 +23,11 @@ $ heroku run rails db:migrate
 
 ##Rake commands
 ```ruby
+# in the name space of export
 * rake export:seeds_format > db/seeds.rb
+* http://www.xyzpub.com/en/ruby-on-rails/3.2/seed_rb.html
+
+
 rails generate scaffold Bookmark note:text book_id:integer entry_date:date page:integer progess:integer
 rails db:migrate
 ```
@@ -51,6 +55,8 @@ http://railscasts.com/episodes/328-twitter-bootstrap-basics?autoplay=true
 #The github:
 https://github.com/seyhunak/twitter-bootstrap-rails 
 ```
+
+
 ## Useful resources
 
 
