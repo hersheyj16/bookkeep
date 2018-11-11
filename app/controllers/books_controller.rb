@@ -5,7 +5,6 @@ class BooksController < ApplicationController
   # GET /books.json
   def index
     @books = Book.all
-    @jenny= "Jenny"
   end
 
   # GET /books/1
@@ -60,6 +59,12 @@ class BooksController < ApplicationController
       format.html { redirect_to books_url, notice: 'Book was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def bookmarks
+    set_book
+    @bookmarks = @book.bookmarks
+    render "bookmarks/index"
   end
 
   private
