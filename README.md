@@ -27,6 +27,30 @@ Things you may want to cover:
 Converting the Gemfile in Listing 1.4 to use exact gem versions results in the code shown in Listing 1.5.
 Something for heroku dev
 
+```
+#To launch a console
+rails console
+
+#To seed a data
+rake db:setup
+rake db:seed
+
+#rake export:seeds_format > db/seeds.rb
+```
+##Heroku commands:
+```clickhouse
+$ heroku run rails db:migrate
+-- rake db:seed
+```
+
+##Rake commands
+```ruby
+* rake export:seeds_format > db/seeds.rb
+rails generate scaffold Bookmark note:text book_id:integer entry_date:date page:integer progess:integer
+rails db:migrate
+```
+
+
 ## Scafolding
 
 ```clickhouse
