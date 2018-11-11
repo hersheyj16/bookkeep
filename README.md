@@ -47,6 +47,9 @@ rails db:migrate
 ```ruby
 #The rails cast
 http://railscasts.com/episodes/328-twitter-bootstrap-basics?autoplay=true
+
+#The github:
+https://github.com/seyhunak/twitter-bootstrap-rails 
 ```
 ## Useful resources
 

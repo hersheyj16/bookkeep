@@ -11,6 +11,16 @@
   </head>
 
   <body>
+    <%= nav_bar fixed: :top, brand: "Book Marks" do %>
+      <%= menu_group do %>
+        <%= menu_item "All Books", books_path %>
+      <%= menu_item "Existing bookmarks", bookmarks_path %>
+
+      <%= menu_item "About Us", root_path %>
+        <%= menu_item "Contact", root_path %>
+      <% end %>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>
