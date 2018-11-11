@@ -23,6 +23,10 @@
 <%= link_to 'Edit', edit_book_path(@book) %> |
 <%= link_to 'Back', books_path %>
 
+<%= link_to "Add Bookmark", new_bookmark_path(book_id: @book.id) %>
+
+<h3>Progress Update</h3>
+<%= @current_progress %>
 <h4> Current Bookmarks: </h4>
 <% @book.bookmarks.each do |bookmark| %>
   <p>Some notes about this book mark: <%= bookmark.note %></p>
@@ -33,5 +37,3 @@
 
 <% end %>
 
-<h3>Test</h3>
-<%= link_to "Add Bookmark", new_bookmark_path(book_id: @book.id) %>
