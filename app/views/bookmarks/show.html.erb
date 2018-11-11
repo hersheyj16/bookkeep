@@ -25,5 +25,11 @@
   <%= @bookmark.progess %>
 </p>
 
+<p>
+  <strong>Pages Read since:</strong>
+  <%= @pages_read %>
+</p>
+
 <%= link_to 'Edit', edit_bookmark_path(@bookmark) %> |
-<%= link_to 'Back', bookmarks_path %>
+<%= link_to 'Back', bookmarks_path %> |
+<%= link_to 'Back To The book', book_path(@bookmark.book)%>

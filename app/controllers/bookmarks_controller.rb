@@ -10,6 +10,15 @@ class BookmarksController < ApplicationController
   # GET /bookmarks/1
   # GET /bookmarks/1.json
   def show
+    # Just some idea to compare deltas between different points in time
+    set_bookmark
+    current_bookmarks = Bookmark.where(book_id: @bookmark.book_id)
+    cur_index = current_bookmarks.index(@bookmark)
+    prev_index = cur_index - 1
+    prev_bookmark =  prev_index >= 0? current_bookmarks[prev_index] : @bookmark
+    pages_read =  @bookmark.page - prev_bookmark.page
+
+    @pages_read = pages_read
   end
 
   # GET /bookmarks/new
@@ -67,6 +76,10 @@ class BookmarksController < ApplicationController
   end
 
   private
+
+  def find_related_book(book_id)
+    Book.find(book_id)
+  end
 
   # Use callbacks to share common setup or constraints between actions.
   def set_bookmark

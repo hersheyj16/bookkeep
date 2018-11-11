@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
 
+<h2>Book Summary</h2>
 <p>
   <strong>Title:</strong>
   <%= @book.title %>
@@ -25,15 +26,13 @@
 
 <%= link_to "Add Bookmark", new_bookmark_path(book_id: @book.id) %>
 
-<h3>Progress Update</h3>
-<%= @current_progress %>
-<%= @progress_bar %>
+<h2>Progress Update</h2>
 
 <div class="container">
-  <h2>Basic Progress Bar</h2>
+  <h3><%= @progress_bar %> % of the book complete
+  </h3>
   <div class="progress">
     <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:<%= @progress_bar%>%">
-      <span class="sr-only">70% Complete</span>
     </div>
   </div>
 </div>
