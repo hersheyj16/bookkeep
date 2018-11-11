@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_10_225118) do
+ActiveRecord::Schema.define(version: 2018_11_11_052319) do
 
   create_table "bookmarks", force: :cascade do |t|
     t.text "note"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 2018_11_10_225118) do
     t.string "desc"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "total_page"
   end
 
 end

@@ -15,15 +15,23 @@
   <%= @book.desc %>
 </p>
 
+<p>
+  <strong>Total Pages:</strong>
+  <%= @book.total_page %>
+</p>
+
 <%= link_to 'Edit', edit_book_path(@book) %> |
 <%= link_to 'Back', books_path %>
-
 
 <h4> Current Bookmarks: </h4>
 <% @book.bookmarks.each do |bookmark| %>
   <p>Some notes about this book mark: <%= bookmark.note %></p>
   <p>made on: <%= bookmark.entry_date %></p>
-  <p><%= bookmark.progess %></p>
-  <%= link_to 'See progress', book_bookmarks_url(bookmark) %>
+  <p>Current on: <%= bookmark.page %></p>
+  <p>Current progress: <%= bookmark.progess %></p>
+  <%= link_to 'See total progress', book_bookmarks_url(bookmark) %>
 
 <% end %>
+
+<h3>Test</h3>
+<%= link_to "Add Bookmark", new_bookmark_path(book_id: @book.id) %>
