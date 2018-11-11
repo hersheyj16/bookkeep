@@ -10,7 +10,7 @@ rake db:seed
 
 #rake export:seeds_format > db/seeds.rb
 ```
-##Heroku commands:
+## Heroku commands:
 ```ruby
 #First time running something
 bundle install --without production
@@ -21,7 +21,7 @@ $ heroku run rails db:migrate
 -- rake db:seed
 ```
 
-##Rake commands
+## Rake commands
 ```ruby
 # in the name space of export
 * rake export:seeds_format > db/seeds.rb
