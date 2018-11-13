@@ -37,6 +37,9 @@
   </div>
 </div>
 
+<h3>Progress Chart</h3>
+<%= @progress_line %>
+
 <h4> Current Bookmarks: </h4>
 <% @book.bookmarks.each do |bookmark| %>
   <p>Some notes about this book mark: <%= bookmark.note %></p>

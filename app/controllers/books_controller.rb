@@ -15,6 +15,7 @@ class BooksController < ApplicationController
     pages_read = cur_bookmarks.max_by {|m| m[:page]}.page
     progress = (pages_read.to_f / @book.total_page.to_f) * 100
     @progress_bar = progress
+    @progress_line = cur_bookmarks.pluck(:page)
   end
 
   # GET /books/new
