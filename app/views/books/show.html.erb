@@ -28,6 +28,21 @@
 
 <h2>Progress Update</h2>
 
+
+<div class="container">
+  <h3>Progress Chart</h3>
+  <%= line_chart @progress_line, width: "800px", height: "500px", colors: ["#b00", "#666"]   %>
+
+
+</div>
+
+<div class="container">
+  <h3>Most read days</h3>
+
+  <%= bar_chart @progress_line , width: "800px", height: "500px" %>
+</div>
+
+
 <div class="container">
   <h3><%= @progress_bar %> % of the book complete
   </h3>
@@ -36,9 +51,6 @@
     </div>
   </div>
 </div>
-
-<h3>Progress Chart</h3>
-<%= @progress_line %>
 
 <h4> Current Bookmarks: </h4>
 <% @book.bookmarks.each do |bookmark| %>

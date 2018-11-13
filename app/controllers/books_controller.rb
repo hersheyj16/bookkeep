@@ -11,11 +11,14 @@ class BooksController < ApplicationController
   # GET /books/1.json
   def show
     set_book
-    cur_bookmarks = @book.bookmarks
-    pages_read = cur_bookmarks.max_by {|m| m[:page]}.page
+    @cur_bookmarks = @book.bookmarks
+    pages_read = @cur_bookmarks.max_by {|m| m[:page]}.page
     progress = (pages_read.to_f / @book.total_page.to_f) * 100
     @progress_bar = progress
-    @progress_line = cur_bookmarks.pluck(:page)
+    date_array= @cur_bookmarks.pluck(:entry_date)
+    page_array = @cur_bookmarks.pluck(:page)
+    @progress_line = Hash[date_array.zip(page_array)]
+    puts @progress_line
   end
 
   # GET /books/new

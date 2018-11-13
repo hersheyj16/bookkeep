@@ -28,7 +28,7 @@ $ heroku run rails db:migrate
 * http://www.xyzpub.com/en/ruby-on-rails/3.2/seed_rb.html
 
 
-rails generate scaffold Bookmark note:text book_id:integer entry_date:date page:integer progess:integer
+rails generate scaffold Bookm****ark note:text book_id:integer entry_date:date page:integer progess:integer
 rails db:migrate
 ```
 
@@ -55,7 +55,11 @@ http://railscasts.com/episodes/328-twitter-bootstrap-basics?autoplay=true
 #The github:
 https://github.com/seyhunak/twitter-bootstrap-rails 
 ```
+## Charting
+```ruby
+https://github.com/ankane/chartkick#chartjs
 
+```
 
 ## Useful resources
 
